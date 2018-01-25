@@ -1,0 +1,47 @@
+@charset "utf-8";
+#con{
+	width:100%;background:url("../img/signup.jpg");height: 969px;background-size: 100% 100%;padding:30px
+}
+#con .box{
+	width:360px;height:647px;margin:212px auto 0;padding:55px 40px;background:#E7E1CD;
+}
+#con .box input{
+	border:1px solid #F4F4F4;background:none;padding-left:10px
+}
+#con .box h2{
+	width:360px;height:20px;margin:0 auto;text-align: center;font-size:26px;color:#fff;line-height:20px
+}
+#con .box .long{
+	width:350px;height:35px;margin:15px auto;
+}
+#con .box div{
+	width:169px;margin-right: 10px;border:1px solid #F4F4F4;float:left;text-align: center;line-height: 35px;height:35px;border-radius: 5px;
+}
+#con .box .msg{
+	width:280px;height:35px;margin:15px 0;border-right: 0;float:left
+}
+#con .box span{
+	font-size:12px;text-decoration: underline;
+}
+#con .box .s1{
+	display:block;width:66px;height:35px;margin:15px 0;border:1px solid #F4F4F4;border-left:0;float:left;line-height:35px
+}
+
+#fix{
+	position: fixed;right:5px;bottom:60px
+}
+#fix a{
+	display:block;width:40px;height:40px;font-size:14px;background:whitesmoke;text-align:center;line-height: 40px;color:#999;padding-top:3px;text-decoration: none;position:relative
+}
+#fix a:nth-of-type(1){
+	border-bottom: 1px solid #777;
+}
+#fix a i{
+	font-size:30px;position:absolute;left:5px
+}
+#fix a:hover{
+	color:green
+}
+#fix a p{
+	line-height: 16px;display:none
+}

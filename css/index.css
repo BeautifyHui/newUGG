@@ -1,1 +1,101 @@
 @charset "utf-8";
+#con{
+	width:100%;
+}
+#con>h2{
+	font-size:18px;width:150px;margin:0 auto;font-weight: 900;line-height: 43px;
+}
+#con>ul{
+	width:1266px;margin:0 auto;
+}
+#con ul li{
+	float:left;
+}
+#con img{
+	width:418px;height:450px;margin:2px 2px
+}
+#con .con1{
+	height:500px;background: url("../img/index/bg.jpg") no-repeat ;position: relative;
+}
+#con .con1 h2{
+	line-height:80px;margin: 0 auto;width:100px;color:#0000CD
+}
+#con .cbox{
+	width:1200px;overflow: hidden;height:312px;margin:0 auto;position:relative
+}
+#con .con1 ul li{float: left;}
+#con .con1 ul li img{
+	width:280px;height:312px;margin:0 10px
+}
+#con .con1 .iconfont{
+	font-size:36px;color:#FFFDEF;position: absolute;top:220px;left:13px;z-index:1;background:rgba(1,1,1,0.4)
+}
+#con .con2 ul{
+	width:1500px;height:368px;margin:0 auto;
+}
+#con .con2 li{
+	float:left;position:relative
+}
+#con .con2 img{
+	width:427px;height:322px
+}
+#con .con2 li a:nth-of-type(1){
+	display: block;width:427px;height:322px;position:absolute;top:2px ;left:2px;background:rgba(1,1,1,0.5);color:#FFFDEF;font-size:18px;line-height:322px;text-align:center;display:none
+}
+#con .con2 li a:nth-of-type(2){
+	display:block;width:427px;height:42px;margin:0 auto;line-height:42px;font-size: 20px;color:#111;text-align: center;
+}
+#con .con3{
+	height:266px;margin-top:18px;width:100%;position:relative
+}
+#con .con3 div{
+	width:1110px;height:39px;top:11px;margin:0 auto
+}
+#con .con3 div i{
+	display:block;width:460px;position: absolute;top:11px;height:1px ;background:#111
+}
+#con .con3 span{
+	font-size:22px;line-height:22px;display:block;width:170px;height:22px;margin:0 auto;text-align: center;
+}
+#con .con3 ul li{
+	width:375px;
+}
+#con .con3 ul img{
+	width:350px;height:146px;margin-top:30px
+}
+#con .con3 ul h2{
+	line-height:18px;width:350px;text-align:center;margin-top:14px
+}
+
+#banner ul{
+	width:1263px;height:565px;position:relative;
+}
+#banner ul li{
+	position: absolute;left:1263px
+}
+#banner ul li>img{
+	width:1263px;height:565px;
+}
+#banner>.icon-xiangzuojiantou {
+	font-size:50px;color:#FFFDEF;position: absolute;top:280px;left:20px;z-index:2
+}
+#banner>.icon-xiangyoujiantou {
+	font-size:50px;color:#FFFDEF;position: absolute;top:280px;left:1180px;z-index:2
+}
+#banner ol{
+	width:900px;position: absolute;;left:260px;top:570px;z-index:2
+}
+#banner ol>li{
+	float:left;width:180px;height:2px;border:1px solid #E9E9E9;margin:0 15px;border-radius: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 window.onload=function(){
 	//二级导航栏效果
 	$("#nav").find(".licon").mouseenter(function(){
-		$(this).css("background","rgba(255,255,255,0.4)").find(".bbox").css("display","block").end().siblings().find(".bbox").css("display","none")
+		$(this).css("background","rgba(255,255,255,0.7)").find(".bbox").css("display","block").end().siblings().find(".bbox").css("display","none")
 	}).mouseleave(function(){
 		$(this).css("background","").find(".bbox").css("display","none")
 	})
@@ -21,47 +21,41 @@ window.onload=function(){
 	}).mouseleave(function(){
 		$(this).find("p").css("border-bottom","none");
 	})
-	lbt();  //轮播图调用
-	$.ajax({
-		url : "json/index.json",
-		type : "get",
-		success : function(msg){
-			var arr = msg;
-			var str = "";
-			var index = 1;
-			var ul = $("#con").find(".con1").find("ul");
-			for(var i = 0; i < arr.length;i++){
-				str +=` <a href="${arr[i].href}">
-						<li><img src="img/${arr[i].src}" alt="" /></li>
-					</a>`
-			}
-			ul.html(str);
-			$("#con").find(".icon-xiangzuojiantou").click(function(){   //con1里面的左右滑动
-				if(index == 3){
-					index = 1;
-					ul.css("left",0);
-				}
-				var left = 1200*index;
-				ul.animate({"left":-left},1000,function(){
-					index++;
-					console.log(index)
-				})
-			})
-			$("#con").find(".icon-xiangyoujiantou").click(function(){ //con1里面的左右滑动
-				if(index == 1 || index == 3){
-					ul.css("left",-2400);
-					ul.animate({"left":-1200},1000);
-					index++;
-				}
-				else{
-					ul.animate({"left":0},1000);
-					index--;
-				}
-			})
+	
+	//搜索效果
+	$("#nav").find(".font").find("i:first").click(function(){
+		$("#nav").find("ul").css("display","none").end().find(".font").css("display","none")
+		$("#nav").find("#shadow").css("display","block");
+	})
+	$("#nav").find("#close").click(function(){
+		$("#nav").find("ul").css("display","block").end().find(".font").css("display","block")
+		$("#nav").find("#shadow").css("display","none");
+	})
+	//吸顶效果
+	$(window).scroll(function(){
+		if($("html,body").scrollTop() >= $("#top").height()){
+			$("#nav").css({"position":"fixed","top":0})
+		}else{
+			$("#nav").css({"position":"absolute","top":$("#top").height()})
+		}
+		
+	})
+	//购物车显示与隐藏效果
+	var flag = true;
+	$("#nav").find(".font").find("i:last").click(function(){
+		if(flag){
+			$("#nav").find(".div").animate({"right":0},500);
+			flag = false;
+		}else{
+			$("#nav").find(".div").animate({"right":-$("#nav").find(".div").width()},500);
+			flag = true;
 		}
 	})
-	
-	
+	$("#nav").find(".div").find(".close").click(function(){
+		$(this).parent().animate({"right":-$(this).parent().width()},500);
+		flag = true;
+	})
+	lbt();  //轮播图调用
 }
 
 //轮播图
