@@ -1,47 +1,114 @@
 @charset "utf-8";
+/*表格样式设置*/
 #con{
-	width:100%;background:url("../img/signup.jpg");height: 969px;background-size: 100% 100%;padding:30px
+	width:100%;background:url("../img/signup.jpg");height: 969px;background-size: 100% 100%;padding:30px;position: relative;
 }
 #con .box{
-	width:360px;height:647px;margin:212px auto 0;padding:55px 40px;background:#E7E1CD;
+	width:360px;height:740px;padding:37px ;position:absolute;left:50%;bottom:0;margin-left:-200px;background:rgba(2,2,2,0.3);line-height:30px;font-size:12px;color:#fff
+}
+.box h3{
+	font-size:12px;color:red;line-height:14px;padding:0 10px;
 }
 #con .box input{
-	border:1px solid #F4F4F4;background:none;padding-left:10px
+	border:1px solid #F4F4F4;background:none;padding-left:10px;outline: none;color: #F4F4F4;
 }
 #con .box h2{
 	width:360px;height:20px;margin:0 auto;text-align: center;font-size:26px;color:#fff;line-height:20px
 }
 #con .box .long{
-	width:350px;height:35px;margin:15px auto;
+	width:350px;height:32px;margin:10px auto;
 }
 #con .box div{
-	width:169px;margin-right: 10px;border:1px solid #F4F4F4;float:left;text-align: center;line-height: 35px;height:35px;border-radius: 5px;
+	width:169px;margin:10px 10px 0 0;border:1px solid #F4F4F4;float:left;text-align: center;line-height: 32px;height:32px;border-radius: 5px;
 }
 #con .box .msg{
-	width:280px;height:35px;margin:15px 0;border-right: 0;float:left
+	width:280px;height:32px;margin:15px 0;border-right: 0;float:left
 }
 #con .box span{
 	font-size:12px;text-decoration: underline;
 }
 #con .box .s1{
-	display:block;width:66px;height:35px;margin:15px 0;border:1px solid #F4F4F4;border-left:0;float:left;line-height:35px
+	display:block;width:66px;height:32px;margin:15px 0;border:1px solid #F4F4F4;border-left:0;float:left;line-height:32px
+}
+#con .box .pass{
+	width:290px;height:32px;float:left;border-right: 0;margin:15px 0
+}
+#con .box .pan{
+	width:55px;height:32px;border:1px solid #F4F4F4;float:left;border-left: 0;margin:15px 0
+}
+#con .box img{
+	width:50px;height:28px;margin:2px;
+}
+#con .box .check{
+	margin:5px
+}
+#con .box #btn{
+	width:355px;margin:10px auto;height:30px;text-align: center;font-size: 18px;color:#fff;background: #111111;display:block;cursor:pointer
 }
 
-#fix{
-	position: fixed;right:5px;bottom:60px
+/*软键盘样式设置*/
+#jianpan {
+    position: absolute;
+    background: rgba(128,128,128,0.7);
+    border-radius: 5px;
+    bottom: 0px;
+    right: 15px;
+    z-index: 9999;
+    width: 45%;
+    height: 30%;
+    display: none;
+	overflow:hidden;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-#fix a{
-	display:block;width:40px;height:40px;font-size:14px;background:whitesmoke;text-align:center;line-height: 40px;color:#999;padding-top:3px;text-decoration: none;position:relative
+
+#jianpan .title {
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid #dcdddd;
+    padding: 0;
+    cursor: move;
+	font-size:1em;
 }
-#fix a:nth-of-type(1){
-	border-bottom: 1px solid #777;
+#jianpan .jianpan_hide{
+    width: 40px;
+    float: right;
 }
-#fix a i{
-	font-size:30px;position:absolute;left:5px
+
+#xfjp {
+    width: 100%;
+    height: 80%;
 }
-#fix a:hover{
-	color:green
+#shift{
+	font-size:0.8em;
 }
-#fix a p{
-	line-height: 16px;display:none
+.jianpan {
+    color: #dcdddd;
+}
+
+.jianpan td {
+    color: #333333;
+    width: 10%;
+    text-align: center;
+    font-size: 1em;
+    border-bottom: 1px solid #dcdddd;
+    border-left: 1px solid #dcdddd;
+}
+
+.jianpan tr td:first-child {
+    border-left: none;
+}
+
+.jianpan tr:last-child td {
+    border-bottom: none;
+}
+
+.jianpan td:active {
+    /*background: #efeff0;*/
+    -moz-box-shadow:0px 0px 10px #AAAAAA inset;
+    -webkit-box-shadow:0px 0px 10px #AAAAAA inset;
+    box-shadow:0px 0px 10px #AAAAAA inset;
 }

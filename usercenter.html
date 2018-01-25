@@ -3,16 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="css/usercenter.css" />
 		<script src="jquery/jquery.min.js"></script>
-		<script src="js/cookie-package.js"></script>
-		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" href="font/iconfont.css" />
 	</head>
 	<body>
-		<div id="top"></div>
-		<div id="nav">
-			<div id="shadow" style="display:none"> <!--搜索功能-->
+<!--导航-->
+		<a name="nav6">  </a>
+		<div id="nav" >
+			<div id="shadow" style="display:none">
 				<div>
 					<i class="iconfont icon-search"></i>
 					<input type="text" placeholder="搜索ugg.cn"/>
@@ -25,7 +25,8 @@
 					<li><i class="iconfont icon-evaluate"></i>清洁保养办法</li>
 				</span>
 			</div>
-			<ul class="ul">  <!--导航栏-->
+		
+			<ul class="ul">
 				
 			
 				<li style="width:180px">
@@ -247,7 +248,7 @@
 				<a href="#"><i class="iconfont icon-search"></i></a>
 				<a href="#"><i class="iconfont icon-goods"></i></a>
 			</div>
-			<div class="div">   <!--购物车-->
+			<div class="div">
 				<i class="iconfont icon-cuowu close"></i>
 				<h3>购物带中还没有商品</h3>
 				<ul>
@@ -269,101 +270,94 @@
 					</li>
 					<li>
 						<i class="iconfont icon-pullup"></i>
-						<a href="#">登录</a><a href="register.html">/注册</a>
+						<a href="#">登录</a>
+						<a href="register.html">/注册</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div id="banner"> <!-- 轮播图-->
-			<i class="iconfont icon-xiangzuojiantou"></i>
-			<ul>
-				<li style="left:0px" ><img src="img/index/home1.jpg" alt=""/></li>
-				<li><img src="img/index/home2.jpg" alt="" /></li>
-				<li><img src="img/index/home3.jpg" alt="" /></li>
-				<li><img src="img/index/home4.gif" alt="" /></li>
-			</ul>
-			<i class="iconfont icon-xiangyoujiantou"></i>
-			<ol>
-				<li style="background:#E9E9E9"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ol>
-		</div>
-		<div id="con" class="clearfix">    <!--二级导航栏-->
-			<h2>S18早春新品</h2>   
-			<ul class="clearfix">
-				<a href="#"><li>
-					<img src="img/index/mpic1.jpg" alt="" />
-				</li></a>
-				<a href="#"><li>
-					<img src="img/index/mpic2.jpg" alt="" />
-				</li></a>
-				<a href="#"><li>
-					<img src="img/index/mpic3.jpg" alt="" />
-				</li></a>
-			</ul>
-			<div class="con1">
-				<h2>#thisisugg</h2>
-				<i class="iconfont icon-xiangzuojiantou"></i>
-					<div class="cbox">
-						<ul style="width:3600px;height:312px;position:absolute">
-						<!--<a href="">
-							<li><img src="" alt="" /></li>
-						</a>-->
-						</ul>
-					</div>
-				<i class="iconfont icon-xiangyoujiantou" style="left:1215px"></i>
-			</div>
-			<div class="con2">
+<!--个人中心-->
+		<div id="con">
+			<p>
+				<a href="#">当前位置/</a>
+				<a href="#">会员中心/</a>
+				<a href="#">我的订单</a>
+			</p>
+			<span>
 				<ul>
 					<li>
-						<img src="img/home-mslide-1.jpg" alt="" />
-						<a href="#">
-							<p>女士 ></p>
-						</a>
-						<a href="#">女士 ></a>
+						<i><em style="color:orange">本年度</em>您共计获得勋章：</i>
+						<h4>0 个</h4>
 					</li>
 					<li>
-						<img src="img/home-mslide-2.jpg" alt="" />
-						<a href="#">
-							<p>儿童 ></p>
-						</a>
-						<a href="#">儿童 ></a>
+						<i>前可兑换勋章：</i>
+						<h4>0 个</h4>
 					</li>
 					<li>
-						<img src="img/home-mslide-3.jpg" alt="" />
-						<a href="#">
-							<p>男士 ></p>
-						</a>
-						<a href="#">男士 ></a>
+						<i>本年度您共计获得太阳花：</i>
+						<h4>0 个</h4>
 					</li>
+					<li>
+						<i><em>当前</em>可使用太阳花共计：</i>
+						<h4>0 个</h4>
+					</li>
+					<i class="li">
+						<i>微信扫一扫，了解勋章和太阳花之[UGGlife]</i>
+						<img src="img/weixin.gif" alt="" />
+					</i>
 				</ul>
-			</div>
-			<div class="con3">
-				<div>
-					<i></i>
-					<span>UGG®最新资讯</span>
-					<i style ="left:725px"></i>
-					<ul>
-						<li>
-							<img src="img/upto_img_1.jpg" alt="" />
-							<h2>你的专属[晶]精彩 ></h2>
-						</li>
-						<li>
-							<img src="img/upto_img_2.jpg" alt="" />
-							<h2>女士包袋配饰 ></h2>
-						</li>
-						<li style="width: 350px;">
-							<img src="img/upto_img_3.jpg" alt="" />
-							<h2>UGG会员信息查询 ></h2>
-						</li>
-					</ul>
-				</div>
+			</span>
+			<div id="left">
+				<ol class="ol">
+					<li>
+						交易管理
+						<ol>
+							<li>我的订单</li>
+							<li>我的优惠券</li>
+						</ol>
+					</li>
+					<li>
+						我的收藏夹
+						<ol>
+							<li>欲望清单</li>
+							<li>到货通知</li>
+						</ol>
+					</li>
+					<li>
+						我的资料
+						<ol>
+							<li>个人信息</li>
+							<li>修改密码</li>
+							<li>收货地址</li>
+						</ol>
+					</li>
+					<li>
+						售后服务
+						<ol>
+							<li>申请售后服务</li>
+						</ol>
+					</li>
+				</ol>
+				<h6>我的订单  <em class="quit">退出</em></h6>
 				
 			</div>
+			
 		</div>
-		<div id="bottom">  <!--底部-->
+		
+<!--固定栏-->	
+		<div id="fix" >
+			<a href="#nav6">
+				<i class="iconfont icon-pullup"></i>
+				<p>回到<br />顶部</p>
+			</a>
+			<a href="">
+				<i class="iconfont icon-comment"></i>
+				<p>对话<br />客服</p>
+			</a>
+		</div>
+	
+<!--//底部-->
+		<div id="bottom">
 			<div class="btm">
 				<div style="height:220px">
 				<section class="sec1">
@@ -427,5 +421,7 @@
 		</div>
 	</body>
 </html>
-<script src="js/index.js"></script>
+
 <script src="js/common.js"></script>
+<script src="js/cookie-package.js"></script>
+<script src="js/usercenter.js"></script>

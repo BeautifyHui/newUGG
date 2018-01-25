@@ -9,7 +9,9 @@
 		<link rel="stylesheet" href="font/iconfont.css" />
 	</head>
 	<body>
-		<div id="nav">
+<!--导航-->
+		<a name="nav6">  </a>
+		<div id="nav" >
 			<div id="shadow" style="display:none">
 				<div>
 					<i class="iconfont icon-search"></i>
@@ -23,7 +25,7 @@
 					<li><i class="iconfont icon-evaluate"></i>清洁保养办法</li>
 				</span>
 			</div>
-			
+		
 			<ul class="ul">
 				
 			
@@ -268,47 +270,111 @@
 					</li>
 					<li>
 						<i class="iconfont icon-pullup"></i>
-						<a href="#">登录/注册</a>
+						<a href="#">登录</a><a href="register.html">/注册</a>
 					</li>
 				</ul>
 			</div>
 		</div>
+<!--表单-->
 		<div id="con">
 			<div class="box">
 				<h2>新会员注册</h2>
-				<input type="text" placeholder="姓名" class="long"/>
+				<input type="text" placeholder="姓名" class="long name"/>
 				<div>
-					<input type="radio" name="sex" value="男" />男
+					<input type="radio" name="sex" value="男" id="boy"/><label for="boy">男</label>
 				</div>
 				<div style="margin-right: 0;">
-					<input type="radio" name="sex" value="女" />女
+					<input type="radio" name="sex" value="女" id="girl" checked="checked"/><label for="girl">女</label>
 				</div>
-				<input type="text" placeholder="请输入手机号" class="long"/>
-				<input type="text" placeholder="图形验证码" style="width:100px;height:35px;margin:15px 0"/> 
-					<span>1234</span><a href="#">刷新</a>
+				<input type="text" placeholder="请输入手机号" class="long tell"/>
+				<input type="text" placeholder="图形验证码" style="width:100px;height:32px;margin:10px 0"/> 
+					<span>1234</span><i class="new" style="cursor: pointer;">刷新</i>
 				<input type="text" placeholder="短信验证码" class="msg"/>
 					<span class="s1">获取验证码</span>
 				<input type="text" placeholder="出生日期" class="long"/>
-				<input type="text" placeholder="yourname@xx.com" class="long"/>
-				<input type="text" placeholder="用户名（英文字母和数字的组合）" class="long"/>
-				<input type="text" placeholder="密码" />
-				<input type="text" placeholder="确认密码" />
-				<input type="checkbox" checked="checked"/>我已阅读并同意<a href="#">网站隐私保护政策</a>
-				<input type="checkbox"checked="checked" />订阅UGG的独家电子报
-				<submit>注册</submit>
+				<input type="text" placeholder="yourname@xx.com" class="long msage"/>
+				<input type="text" placeholder="用户名（英文字母和数字的组合）" class="long yname"/>
+				<input type="password" placeholder="密码" class="pass pass1" id="password"  class="common input psw-height" name="userpass" onfocus="xfjianpan(this.id)"/>
+					<span class="pan">
+						<img src="img/jianpan.jpg" alt="" onClick="xfjianpan(true)"/>
+					</span>
+				
+				<input type="password" placeholder="确认密码" class="pass pass2" />
+					<span class="pan">
+						<img src="img/jianpan.jpg" alt="" span class="jianpan_hide" onClick="xfjianpan(false)"/>
+					</span>
+				<input type="checkbox" checked="checked" class="check"/>我已阅读并同意<a href="#">网站隐私保护政策</a><br />
+				<input type="checkbox"checked="checked" class="check"/>订阅UGG的独家电子报
+				<button id="btn">注册</button>
 			</div>	
-		</div>
-		<div id="fix">
-			<a href = "#nav">
-				<i class="iconfont icon-pullup"></i>
-				<p>回到<br />顶部</p>
-			</a>
-			<a href = "#">
-				<i class="iconfont icon-comment"></i>
-				<p>对话<br />客服</p>
-			</a>
-		</div>
-		<!--//底部-->
+		
+<!--//固定栏-->				
+			<div id="fix" >
+				<a href="#nav6">
+					<i class="iconfont icon-pullup"></i>
+					<p>回到<br />顶部</p>
+				</a>
+				<a href="">
+					<i class="iconfont icon-comment"></i>
+					<p>对话<br />客服</p>
+				</a>
+			</div>
+	</div>	
+<!--键盘-->
+			<div id="jianpan">
+					    <div class="title" style="text-align:center;"><span id="jptitle"></span><span class="jianpan_hide" onClick="xfjianpan(false)">×</span></div>
+					    <table id="xfjp" class="jianpan" cellspacing="0" cellpadding="0">
+					        <tr>
+					            <td>1</td>
+					            <td>2</td>
+					            <td>3</td>
+					            <td>4</td>
+					            <td>5</td>
+					            <td>6</td>
+					            <td>7</td>
+					            <td>8</td>
+					            <td>9</td>
+					            <td>0</td>
+					        </tr>
+					        <tr>
+					            <td>q</td>
+					            <td>w</td>
+					            <td>e</td>
+					            <td>r</td>
+					            <td>t</td>
+					            <td>y</td>
+					            <td>u</td>
+					            <td>i</td>
+					            <td>o</td>
+					            <td>p</td>
+					        </tr>
+					        <tr>
+					            <td>a</td>
+					            <td>s</td>
+					            <td>d</td>
+					            <td>f</td>
+					            <td>g</td>
+					            <td>h</td>
+					            <td>j</td>
+					            <td>k</td>
+					            <td>l</td>
+					            <td>空格</td>
+					        </tr>
+					        <tr>
+					            <td id="shift">shift</td>
+					            <td>z</td>
+					            <td>x</td>
+					            <td>c</td>
+					            <td>v</td>
+					            <td>b</td>
+					            <td>n</td>
+					            <td>m</td>
+					            <td colspan="2">清空</td>
+					        </tr>
+					    </table>
+					</div>
+		
+<!--//底部-->
 		<div id="bottom">
 			<div class="btm">
 				<div style="height:220px">
@@ -376,3 +442,4 @@
 
 <script src="js/common.js"></script>
 <script src="js/register.js"></script>
+<script src="js/cookie-package.js"></script>

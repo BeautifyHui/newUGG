@@ -1,0 +1,68 @@
+/*固定栏*/
+#fix{
+	position: fixed;right:5px;bottom:60px
+}
+#fix a{
+	display:block;width:40px;height:40px;font-size:14px;background:whitesmoke;text-align:center;line-height: 40px;color:#999;padding-top:3px;text-decoration: none;position:relative
+}
+#fix a:nth-of-type(1){
+	border-bottom: 1px solid #777;
+}
+#fix a i{
+	font-size:30px;position:absolute;left:5px
+}
+#fix a:hover{
+	color:green
+}
+#fix a p{
+	line-height: 16px;display:none
+}
+/*内容栏*/
+#con{
+	height:572px;width:100%;margin:60px 0 0
+}
+#con p{
+	height:32px;width:1170px;margin:0 auto;
+}
+#con p a{
+	line-height:32px;text-decoration: none;font-size:14px;color:#111
+}
+#con span{
+	position: relative;width:1170px;height:180px;margin:0 auto;background: url("../img/index/bg.jpg");background-size: 100%;display:block
+}
+#con ul{
+	position:absolute;width:1170px;height:180px;top:0 ;left:0
+}
+#con ul li,.li{
+	display:block;float:left;background:rgba(1,1,1,0.2);width:110px;height:110px;margin: 15px 40px;padding:20px;text-align: center;color:#fff
+}
+#con ul .li{
+	font-size: 10px;padding:10px;width:130px;height:130px;background:#fff;color:#111
+}
+#con ul .li img{
+	width:97px;height:97px;margin:5px 18px;
+}
+#con ul li h4{
+	font-size: 24px;margin:16px;font-weight: 900;
+}
+#con #left{
+	width:1170px;margin:0 auto;height:360px;
+}
+#con #left .ol{
+	width:200px;height:360px;position: static;font-size: 18px;font-weight: 900;float:left
+}
+#con #left ol li{
+	line-height:30px;
+}
+#con #left ol li ol{
+	font-size:12px;font-weight: 100;
+}
+#con #left{
+	width:
+}
+#con h6{
+	width: 960px;float: left;height:58px;border-bottom: 2px solid #ccc;line-height:58px;font-size:#999;font-size: 24px;
+}
+#con h6>em{
+	font-size:16px;display:block;float:right;margin:20px;height:30px;width:60px;border:1px solid #404040;line-height:30px;text-align: center;
+}

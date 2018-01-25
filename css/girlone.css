@@ -1,0 +1,54 @@
+#banner{
+	width:1263px;height:355px;position: relative;
+}
+#banner div{
+	position: absolute;width:3790px
+}
+#banner div img{
+	width:1263px;height:355px;
+}
+#banner ul{
+	position: absolute;bottom:30px;width:910px;height:5px;display:block;z-index:5;left:50%;margin-left: -455px;
+}
+#banner ul li{
+	display:block;width:200px;height:2px;border:1px solid #AAAAAA;margin:0 50px;float:left;
+}
+#continer>h2>a{
+	font-size: 14px;line-height:18px;color:#333
+}
+#continer .rbox{
+	border:1px solid #ccc;padding:3px;width:140px;height:auto;float:right;margin-top:15px
+}
+#continer .rbox .xuanze{
+	float:right;margin-right: 15px;display: block;
+}
+#continer .conpic{
+	height:1205px;width:1170px;margin:0 auto;
+}
+#continer .conpic dl{
+	border:1px solid rgba(1,1,1,0);width:260px;height:400px;padding:0 15px;font-size: 14px;float:left
+}
+#continer .conpic dl dd{
+	width:261px;height:310px;margin:0 auto;border-bottom: 1px solid #ccc;position: relative;
+}
+#continer .conpic dd p{
+	opacity: 0;
+}
+#continer .conpic dt li:nth-of-type(4){
+	display:none
+}
+#continer .conpic dt li:nth-of-type(3) span:nth-of-type(1){
+	color:orange;margin-left:140px
+}
+#continer .conpic dt li:nth-of-type(3) span:nth-of-type(2){
+	color:deepskyblue
+}
+#continer .conpic dd  p{
+	background:#000000;line-height:20px;color:#fff;font-size: 12px;text-align: right;width:261px
+}
+#continer .conpic dl dd img{
+	width:261px;height:290px;margin:-1px 0 0 ;position: absolute;top:0;left:0;
+}
+#continer .conpic dl dt li a{
+	float:left;margin:1px;width:18px;height:18px;background: red;
+}

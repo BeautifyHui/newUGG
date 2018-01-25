@@ -22,7 +22,7 @@ window.onload=function(){
 		$(this).find("p").css("border-bottom","none");
 	})
 	
-	//搜索效果
+//搜索效果
 	$("#nav").find(".font").find("i:first").click(function(){
 		$("#nav").find("ul").css("display","none").end().find(".font").css("display","none")
 		$("#nav").find("#shadow").css("display","block");
@@ -31,7 +31,7 @@ window.onload=function(){
 		$("#nav").find("ul").css("display","block").end().find(".font").css("display","block")
 		$("#nav").find("#shadow").css("display","none");
 	})
-	//吸顶效果
+//吸顶效果
 	$(window).scroll(function(){
 		if($("html,body").scrollTop() >= $("#top").height()){
 			$("#nav").css({"position":"fixed","top":0})
@@ -40,7 +40,7 @@ window.onload=function(){
 		}
 		
 	})
-	//购物车显示与隐藏效果
+//购物车显示与隐藏效果
 	var flag = true;
 	$("#nav").find(".font").find("i:last").click(function(){
 		if(flag){
@@ -55,7 +55,30 @@ window.onload=function(){
 		$(this).parent().animate({"right":-$(this).parent().width()},500);
 		flag = true;
 	})
-	lbt();  //轮播图调用
+//固定栏
+	$("#fix").find("a").mouseenter(function(){
+		$(this).find("i").stop().animate({"left":-$(this).find("i").width()},400);
+		$(this).find("p").css("display","block")
+	}).mouseleave(function(){
+		$(this).find("i").stop().animate({"left":5},400)
+		$(this).find("p").css("display","none")
+	})
+	
+//购物车
+	if(get("user")){
+		var arr = JSON.parse(get("user"))
+		var str = arr[0].name;
+		$("#nav").find($(".div")).find("li:last").html(`<i class="iconfont icon-pullup"></i>
+						<a href="#">${str}${"退出"}</a>`)
+	
+	$("#nav").find($(".div")).find("li:last").click(function(){
+		save("user","",10);
+		$(this).html(`<i class="iconfont icon-pullup"></i>
+						<a href="#">登录</a><a href="register.html">/注册</a>`)
+	})
+	}
+//轮播图调用	
+	lbt();  
 }
 
 //轮播图

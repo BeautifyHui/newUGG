@@ -1,0 +1,16 @@
+@charset "utf-8";
+#con{
+	width:1200px;height:438px;margin: 0 auto;padding-top:25px;
+}
+#con div{
+	width:570px;height:463px;float:left;margin:0 15px;position: relative;
+}
+#con div img{
+	width:570px;height:369px;
+}
+#con div span{
+	display:block;width:570px;height:369px;background: rgba(1,1,1,0.4);position: absolute;top:0;font-size: 18px;color:#fff;line-height: 369px;text-align: center;display: none;left:0
+}
+#con div a{
+	display:block;width:570px;line-height:66px;font-size:20px;text-align: center;color:#333
+}
