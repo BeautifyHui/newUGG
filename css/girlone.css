@@ -37,6 +37,9 @@
 #continer .conpic dt li:nth-of-type(4){
 	display:none
 }
+#continer .conpic>a{
+	display:block;width:292px;height:400px;float: left;
+}
 #continer .conpic dt li:nth-of-type(3) span:nth-of-type(1){
 	color:orange;margin-left:140px
 }
@@ -44,11 +47,17 @@
 	color:deepskyblue
 }
 #continer .conpic dd  p{
-	background:#000000;line-height:20px;color:#fff;font-size: 12px;text-align: right;width:261px
+	background:#000000;line-height:20px;color:#fff;font-size: 12px;text-align: right;width:261px;position: absolute;bottom:0
+}
+#continer>p{
+	line-height:20px;font-size:12px;width:1090px;margin:0 auto;padding:10px
 }
 #continer .conpic dl dd img{
-	width:261px;height:290px;margin:-1px 0 0 ;position: absolute;top:0;left:0;
+	width:261px;height:290px;position: absolute;top:0;left:0;
 }
-#continer .conpic dl dt li a{
+#continer .conpic dl dd img:nth-of-type(1){
+	z-index:1
+}
+#continer .conpic dl dt li em{
 	float:left;margin:1px;width:18px;height:18px;background: red;
 }

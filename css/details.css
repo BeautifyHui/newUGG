@@ -1,0 +1,15 @@
+#con>img{
+	width:1263px;height:565px
+}
+#con .pic{
+	width:1170px;height:646px;padding-top:40px;margin:0 auto
+}
+#con .pic .right1{
+	width:652px;height:646px;float: left;;
+}
+#con .pic .right1 span:nth-of-type(1){
+	float:left;width:59px;height:602px;background:#FFA500
+}
+#con .pic .right1 span:nth-of-type(2){
+	display:block;width:579px;height:646px;background:#6495ED
+}
