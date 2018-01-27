@@ -43,9 +43,290 @@
       width: 579px;
       height: 646px;
       border: 1px solid #111111;
-      float: left; }
+      float: left;
+      overflow: hidden;
+      position: relative; }
       #con .pic .left1 span:nth-of-type(2) > img {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        cursor: url("../img/cursor/zoomin.png"), pointer;
+        position: absolute; }
+  #con .pic .right1 {
+    padding-left: 10px;
+    float: left;
+    height: 646px;
+    width: 507px; }
+    #con .pic .right1 p {
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      line-height: 40px; }
+    #con .pic .right1 p:nth-of-type(1) {
+      border: 0;
+      line-height: 24px; }
+    #con .pic .right1 h2 {
+      font-size: 18px;
+      color: #333;
+      font-weight: 900;
+      line-height: 38px; }
+    #con .pic .right1 h3 {
+      line-height: 40px;
+      font-size: 14px;
+      color: #333;
+      display: inline-block;
+      width: 507px; }
+    #con .pic .right1 div {
+      border: 1px solid rgba(255, 0, 0, 0);
+      float: left;
+      padding: 1px;
+      margin: 0 3px; }
+    #con .pic .right1 div:nth-of-type(2) {
+      margin-right: 280px; }
+    #con .pic .right1 div:nth-of-type(2):hover {
+      border: 1px solid red; }
+    #con .pic .right1 div:nth-of-type(1):hover {
+      border: 1px solid red; }
+    #con .pic .right1 em {
+      width: 507px;
+      float: left;
+      line-height: 22px;
+      font-size: 14px; }
+    #con .pic .right1 i {
+      width: 30px;
+      height: 30px;
+      display: block;
+      float: left;
+      margin: 10px 5px; }
+    #con .pic .right1 i:nth-of-type(2) {
+      margin-right: 400px; }
+    #con .pic .right1 section {
+      width: 108px;
+      height: 34px;
+      text-align: center;
+      font-size: 14px;
+      float: left;
+      background: #DCDDDD;
+      color: #111;
+      position: relative; }
+      #con .pic .right1 section > img {
+        width: 10px;
+        height: 10px;
+        float: right;
+        padding: 12px 14px 0 0; }
+      #con .pic .right1 section > p {
+        display: block;
+        float: left;
+        width: 84px;
+        text-align: center;
+        padding-top: 6px; }
+    #con .pic .right1 form {
+      float: left;
+      background: #DCDDDD;
+      margin: 0 8px 3px 6px;
+      border: none; }
+      #con .pic .right1 form option {
+        width: 96px;
+        height: 22px;
+        float: left;
+        background: #F4F4F4;
+        border: none;
+        outline: none; }
+    #con .pic .right1 select {
+      width: 108px;
+      height: 34px;
+      padding: 6px 12px;
+      line-height: 22px;
+      font-size: 14px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      background: url("../img/details/jian.png") no-repeat 85px;
+      background-size: 10px 10px;
+      outline: none; }
+    #con .pic .right1 b {
+      float: left;
+      font-size: 14px;
+      line-height: 34px;
+      width: 245px; }
+    #con .pic .right1 ol {
+      width: 220px;
+      height: 124px;
+      background: #DCDDDD;
+      float: left;
+      padding-top: 8px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      display: none; }
+      #con .pic .right1 ol li {
+        float: left;
+        background: #F5F5F5;
+        width: 105px;
+        height: 34px;
+        margin: 2px;
+        background: #f9f7f6;
+        text-align: center;
+        font-size: 14px;
+        line-height: 34px;
+        cursor: pointer; }
+    #con .pic .right1 div:nth-of-type(3) {
+      width: 505px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      padding: 5px 0; }
+      #con .pic .right1 div:nth-of-type(3) > img {
+        width: 30px;
+        height: 30px;
+        float: left; }
+    #con .pic .right1 div:nth-of-type(4), #con .pic .right1 div:nth-of-type(5) {
+      height: 43px;
+      width: 176px;
+      background: red;
+      color: #FFF;
+      line-height: 43px;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 5px;
+      margin: 5px 5px 0 0; }
+    #con .pic .right1 div:nth-of-type(5) {
+      background: #111; }
+    #con .pic .right1 > span {
+      display: block;
+      width: 500px;
+      height: 30px;
+      margin: 20px 0;
+      float: left; }
+      #con .pic .right1 > span > img {
+        width: 90px;
+        height: 30px;
+        margin: 0 2px 0 0;
+        float: left; }
+    #con .pic .right1 h6 {
+      font-size: 12px;
+      float: left;
+      margin: -5px;
+      padding-left: 10px; }
+
+#con1 {
+  width: 1170px;
+  margin: 0 auto; }
+  #con1 div:nth-of-type(1) {
+    width: 1170px;
+    height: 36px;
+    padding-top: 30px;
+    line-height: 36px;
+    border-bottom: 1px solid #333333; }
+    #con1 div:nth-of-type(1) ol {
+      width: 864px;
+      height: 36px;
+      margin: 0 auto; }
+      #con1 div:nth-of-type(1) ol li {
+        width: 216px;
+        height: 31px;
+        line-height: 31px;
+        color: #111;
+        background: #ccc;
+        float: left;
+        text-align: center; }
+        #con1 div:nth-of-type(1) ol li i {
+          float: left;
+          padding-left: 5px;
+          font-size: 24px;
+          color: #111; }
+  #con1 .prodetails1 {
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 12px; }
+    #con1 .prodetails1 p {
+      line-height: 26px;
+      width: 975px;
+      margin: 0 auto; }
+      #con1 .prodetails1 p span {
+        font-size: 16px;
+        font-weight: 900; }
+    #con1 .prodetails1 p:nth-of-type(1) {
+      margin: 10px auto  15px; }
+    #con1 .prodetails1 div:nth-of-type(1) {
+      width: 940px;
+      height: 0.5px;
+      margin: 25px auto;
+      background: #999;
+      padding: 0;
+      position: relative; }
+      #con1 .prodetails1 div:nth-of-type(1) > span {
+        width: 101px;
+        height: 19px;
+        text-align: center;
+        background: #fff;
+        position: absolute;
+        top: -15px;
+        margin-left: 400px; }
+    #con1 .prodetails1 ul {
+      width: 1170px;
+      height: 700px;
+      margin: 0 auto; }
+    #con1 .prodetails1 li {
+      width: 570px;
+      height: 352px;
+      float: left;
+      margin-left: 30px; }
+      #con1 .prodetails1 li img {
+        width: 570px;
+        height: 321px;
+        margin-bottom: 6px; }
+      #con1 .prodetails1 li p {
+        line-height: 17px; }
+        #con1 .prodetails1 li p em {
+          font-weight: 900; }
+  #con1 h2 {
+    font-size: 18px;
+    line-height: 30px;
+    color: #111;
+    width: 1170px;
+    margin: 50px auto 0;
+    height: 30px;
+    background: #f4f4f4;
+    font-weight: 900; }
+    #con1 h2 i {
+      width: 45px;
+      height: 30px;
+      font-size: 20px;
+      padding-left: 15px; }
+  #con1 section {
+    background: #faf9f7;
+    font-size: 14px;
+    height: 1100px; }
+    #con1 section .conxiangqing1 {
+      height: 104px;
+      margin: 0 auto;
+      width: 1170px;
+      border: none; }
+      #con1 section .conxiangqing1 em {
+        width: 300px;
+        height: 104px;
+        float: left; }
+      #con1 section .conxiangqing1 em:nth-of-type(1) {
+        padding-left: 20px; }
+      #con1 section .conxiangqing1 em:nth-of-type(2) {
+        width: 90px;
+        height: 84px;
+        border-right: 1px solid #000000;
+        float: left;
+        padding-top: 10px; }
+        #con1 section .conxiangqing1 em:nth-of-type(2) p {
+          text-align: right;
+          line-height: 20px; }
+      #con1 section .conxiangqing1 em:nth-of-type(3) {
+        width: 120px;
+        height: 84px; }
+        #con1 section .conxiangqing1 em:nth-of-type(3) li {
+          width: 100px;
+          height: 7px;
+          margin: 14px 0;
+          background: yellow; }
+        #con1 section .conxiangqing1 em:nth-of-type(3) i {
+          font-size: 12px;
+          float: right; }
 
 /*# sourceMappingURL=details1.css.map */
