@@ -5,13 +5,14 @@
 		<title></title>
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="font/iconfont.css" />
-		<link rel="stylesheet" href="css/details1.css" />
+		<link rel="stylesheet" href="css/details.css" />
 		<script src="jquery/jquery.min.js"></script>
 		<script src="js/cookie-package.js"></script>
-		<script src="js/common.js"></script>
+		
 		
 	</head>
 	<body>
+		<a name="top">  </a>
 		<div id="nav">
 			<div id="shadow" style="display:none"> <!--搜索功能-->
 				<div>
@@ -34,7 +35,7 @@
 						<img src="img/small.png" alt="" />
 					</p>
 					<p id="p2">
-						<img src="img/logo.png" alt="" />
+						<a href="index.html"><img src="img/logo.png" alt="" /></a>
 					</p>
 				</li>
 				<a href="girlIndex.html">
@@ -250,11 +251,11 @@
 			</div>
 			<div class="div">   <!--购物车-->
 				<i class="iconfont icon-cuowu close"></i>
-				<h3>购物带中还没有商品</h3>
+				<h3 class="shopcar">购物带中还没有商品</h3>
 				<ul>
 					<li>
 						<i class="iconfont icon-goodsfavor"></i>
-						<a href="#">购物袋（0）</a>
+						<a href="#" id="shop1">购物袋（0）</a>
 					</li>
 					<li>
 						<i class="iconfont icon-like"></i>
@@ -270,14 +271,12 @@
 					</li>
 					<li>
 						<i class="iconfont icon-pullup"></i>
-						<a href="#">登录</a><a href="register.html">/注册</a>
+						<a href="login.html">登录</a><a href="register.html">/注册</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div id="banner"> <!-- 轮播图-->
-		</div>
-		<div id="con">
+		<div id="con">      <!-- 内容区-->
 			<img src="img/details/1.jpg" alt="" />
 			<div class="pic">
 				<div class="left1">
@@ -296,9 +295,9 @@
 				</div>
 				<div class="right1">
 					<p>女士</p>
-					<h2>S18 早春 艾迪生</h2>
+					<h2 class="type">S18 早春 艾迪生</h2>
 					<p style="line-height: 30px;border-top: 1px solid #ccc;">Adison</p>
-					<p>￥1889 | 货号：1020038-GRV-06</p>
+					<p class="price">￥1889 | 货号：1020038-GRV-06</p>
 					<p>☆☆☆☆☆☆☆☆<span>（0）</span> | ❤ 加入欲望清单</p>
 					<h3>点击了解舒适设计:</h3>
 					<div><img src="img/details/design.jpg" alt="" /></div>
@@ -306,7 +305,7 @@
 					<em>选择颜色:</em>
 					<i style="background: pink;" id="pinkp"></i><i style="background: deepskyblue;" id="bluep"></i>
 					<section>
-						<p>尺码/欧码</p>  <img src="img/details/jian.png" alt="" />
+						<p class="size">尺码 | 欧码</p>  <img src="img/details/jian.png" alt="" />
 						<ol>
 							<li>36</li>
 							<li>37</li>
@@ -316,8 +315,8 @@
 						</ol>
 					</section>
 					<form action="#">
-						<select name="size">
-							<option value="0">数量</option>
+						<select name="size" class="select">
+							<option value="0" >数量</option>
 							<option value="37">1</option>
 							<option value="38">2</option>
 							<option value="39">3</option>
@@ -326,8 +325,8 @@
 					</form>
 					<b>库存充足</b>
 					<div><img src="img/details/Ruler-100.png" alt="" />担心尺码不准？</div>
-					<div>立即购买</div>
-					<div>加入购物袋</div>
+					<div id="buy">立即购买</div>
+					<div id="save">加入购物袋</div>
 					<span>
 						<img src="img/details/shunfeng.jpg" alt="" />
 						<img src="img/details/door.jpg" alt="" />
@@ -338,14 +337,15 @@
 		</div>
 		<div id="con1">
 			<div>
-				<ol>
+				<ol id="con1-menu">
 					<li><i class="iconfont icon-list"></i>商品详情</li>
 					<li><i class="iconfont icon-appreciate"></i>商品评价</li>
 					<li><i class="iconfont icon-selection"></i>测量  | 试穿感受</li>
 					<li><i class="iconfont icon-deliver"></i>洗护 | 支付 | 配送...</li>
 				</ol> 
 			</div>
-			<div class="prodetails1">
+			
+			<div class="prodetails1 part">
 				<img src="img/details/con1b.jpg" alt="" />
 				<p><span>产品描述：</span>经典的新奇系列鞋型搭配17毫米 皮毛一体表层，鞋侧柔软的皮革制成蝴蝶结装饰，搭配内里17毫米羊毛内里，让舒适温暖与精致时尚同行</p>
 				<p><span>品名：</span>W Daelynn 戴琳</p>
@@ -374,7 +374,7 @@
 					</li>
 				</ul>
 			</div>
-			<section>
+			<section class="part">
 			<h2><i class="iconfont icon-appreciate"></i>商品评论</h2>
 				<div class="conxiangqing1">
 					<em>
@@ -431,7 +431,7 @@
 					<input type="submit" value="提交评论" />
 				</form>
 			</section>
-			<section>
+			<section class="part">
 				<h2><i class="iconfont icon-selection"></i>测量 | 试穿感受<img src="img/details/Ruler-100.png" alt="" /><span>不清楚尺码如何测量？</span></h2>
 				<table cellpadding="0" cellspacing="0">
 					<tr><td colspan="12">女士尺码表</td></tr>
@@ -479,10 +479,150 @@
 					</tr>
 				</table>
 			</section>
+			<section id="list" class="part">
+				<h2><i class="iconfont icon-deliver"></i>洗护 | 支付 | 配送...<span id="list-show" style="cursor: pointer;">+</span></h2>
+				<nav>
+				<span>
+					<img src="img/details/pdpcleaning.jpg" alt="" />
+				</span>
+				<div><span>支付方式</span></div>
+				<li>
+					<img src="img/details/pdpweixin.jpg" alt="" />
+					<img src="img/details/pdpzhifubao.jpg" alt="" />
+					<img src="img/details/pdpyinlian.jpg" alt="" />
+				</li>
+				<div><span>配送方式</span></div>
+				<img src="img/details/shunfeng.jpg" alt="" />
+				<p><span>配送范围：</span>中国大陆地区</p>
+				<p><span>关于运费：</span>中国大陆地区，全场满299元包邮；商品未满299元，收取运费20元</p>
+				<p><span>发货时间：</span>UGG官方网站日常每天发货截止时间为17:00；日常拍下的订单48小时内发货，如遇特殊情况导致延时发货，UGG官方网站会有公告提前通知</p>
+				<div><span>退换货</span></div>
+				<p><span>退货：</span>我们提供完善的售后服务，承诺自客户收到商品之日（以签收日期为准）起7天内，如果对于商品有任何不满意，符合退换货政策的前提下，我们将提供无理由退换货服务。</p>
+				<p><span>换货：</span>UGG官方网站支持换货，在收到商品30天内，如果对于商品有任何不满意，符合换货标准的，我们将提供无理由换货服务（只限于中国大陆地区）。</p>
+				<div><span>发票</span></div>
+				<p>如需开具发票，请直接联系我们的<a href="#">在线客服</a></p>
+				<p><span>·</span>&ensp;&ensp;如已开具发票，请买家妥善保管发票</p>
+				<p><span>·</span>&ensp;&ensp;发票邮寄时间为：客户确认收货7天后再申请，30天以内寄出</p>
+				<p><span>·</span>&ensp;&ensp;如您已要求开具发票后提出退货申请，请在收到发票后联系客服退回发票</p>
+				<div><span>鞋盒标签信息说明</span></div>
+				<p>我司因业务发展需要，自2017年7月4日起办公地址搬迁。</p>
+				<p>原址为：上海市黄浦区南京西路128号永新广场16楼</p>
+				<p>新址为：上海市黄浦区蒙自路757号歌斐中心21楼</p>
+				<p>鞋盒标签上的公司地址信息，从17年7月4日起，将按照发货批次对应更新；在此之前订单的鞋盒标签上，将保持原地址。
+开票信息不变；服务承诺不变。若有任何疑问，请联系<a href="#">在线客服</a>，或请致电：<a href="#">4000-199-177</a>。</p>
+				</nav>
+			</section>
 			<section>
-				<h2><i class="iconfont icon-deliver"></i>洗护 | 支付 | 配送...<span>+</span></h2>
+				<i>您可能感兴趣</i>
+				<span class="conpic1">
+				<dl>
+					<dd>
+						<img src="img/index/mpic1.jpg" alt="" />
+						<p>轻翼科技外底 | 皮毛一体羊皮</p>
+					</dd>
+					<dt>
+						<li>S18 早春 迷你贝莉纽扣（波比款）</li>
+						<li>￥1580</li>
+						<li>4色 <span>★★★★★</span><span>（7）</span></li>
+						<li>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</li>
+					</dt>
+				</dl>
+				
+			</span>
+			<span class="conpic1">
+				<dl>
+					<dd>
+						<img src="img/index/mpic1.jpg" alt="" />
+						<p>轻翼科技外底 | 皮毛一体羊皮</p>
+					</dd>
+					<dt>
+						<li>S18 早春 迷你贝莉纽扣（波比款）</li>
+						<li>￥1580</li>
+						<li>4色 <span>★★★★★</span><span>（7）</span></li>
+						<li>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</li>
+					</dt>
+				</dl>
+				
+			</span>
+			<span class="conpic1">
+				<dl>
+					<dd>
+						<img src="img/index/mpic1.jpg" alt="" />
+						<p>轻翼科技外底 | 皮毛一体羊皮</p>
+					</dd>
+					<dt>
+						<li>S18 早春 迷你贝莉纽扣（波比款）</li>
+						<li>￥1580</li>
+						<li>4色 <span>★★★★★</span><span>（7）</span></li>
+						<li>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</li>
+					</dt>
+				</dl>
+				
+			</span>
+			<span class="conpic1">
+				<dl>
+					<dd>
+						<img src="img/index/mpic1.jpg" alt="" />
+						<p>轻翼科技外底 | 皮毛一体羊皮</p>
+					</dd>
+					<dt>
+						<li>S18 早春 迷你贝莉纽扣（波比款）</li>
+						<li>￥1580</li>
+						<li>4色 <span>★★★★★</span><span>（7）</span></li>
+						<li>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</li>
+					</dt>
+				</dl>
+				
+			</span>
 			</section>
 		</div>	
+		</div>
+		<div id="fix">
+			<a href="#">
+				<i class="iconfont icon-list"></i>
+				<p>商品<br />详情</p>
+			</a>
+			<a href="#">
+				<i class="iconfont icon-appreciate"></i>
+				<p>商品<br />评论</p>
+			</a>
+			<a href="#">
+				<i class="iconfont icon-selection"></i>
+				<p>s试穿<br />感受</p>
+			</a>
+			<a href="#">
+				<i class="iconfont icon-deliver"></i>
+				<p>洗护<br />...</p>
+			</a>
+			<a href="#top">
+				<i class="iconfont icon-pullup"></i>
+				<p>回到<br />顶部</p>
+			</a>
+			<a href="#">
+				<i class="iconfont icon-comment"></i>
+				<p>对话<br />客服</p>
+			</a>
+				
 		</div>
 		<div id="bottom">  <!--底部-->
 			<div class="btm">
@@ -548,4 +688,5 @@
 		</div>
 	</body>
 </html>
+<script src="js/common.js"></script>
 <script src="js/details.js"></script>

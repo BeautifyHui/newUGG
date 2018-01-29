@@ -72,11 +72,42 @@ window.onload=function(){
 						<a href="#">${str}${"退出"}</a>`)
 	
 	$("#nav").find($(".div")).find("li:last").click(function(){
-		save("user","",10);
 		$(this).html(`<i class="iconfont icon-pullup"></i>
-						<a href="#">登录</a><a href="register.html">/注册</a>`)
+						<a href="login.html">登录</a><a href="register.html">/注册</a>`)
 	})
 	}
+//购物车商品添加功能
+shop();
+function shop(){
+	var i = 1;
+	var shopArr = [];
+	$("#save").click(function(){
+		if( parseInt($(".size").html())){
+			if($(".select").find("option:selected").index() != 0){
+				var json = {
+					"type":$(".type").html(),
+					"picture":$(".fdj").find("img").src,
+					"price":$(".price").html(),
+					"num":$(".select").find("option:selected").index(),
+					"size":$(".size").html()
+				}
+				shopArr.push(json);
+				var str = JSON.stringify(shopArr)
+				save("shopCar",str)
+				$(".shopcar").html("购物袋中有（"+i+"）件商品");
+				$("#shop1").html("商品（"+i+"）")
+				i++;
+				
+			}else{
+				alert("请选择数量")
+			}
+		}else{
+			alert("请选择尺码哦")
+		}
+		
+	})
+	
+}
 //轮播图调用	
 	lbt();  
 }

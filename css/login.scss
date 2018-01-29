@@ -1,0 +1,30 @@
+#con2{
+    background:url("../img/bg2.jpg") no-repeat 100%;width:100%;height:532px;padding-top:166px;
+    section{
+        width:687px;height:280px;padding:40px;margin:0 auto;background:rgba(1,1,1,0.3);
+        article{
+            width:320px;height:280px;float:left;font-size:14px;color:#fff;border-right:1px solid #ccc ;letter-spacing: 3px;padding-right: 20px;;
+            h2{
+                font-weight: 900;padding-bottom: 25px;
+            }
+            i , a{
+                text-decoration: underline;color:#fff;
+            }
+            span:nth-of-type(1){
+                margin-right: 80px;;
+            }
+            input{
+                width:265px;height:20px;margin:10px auto;border:1px solid #fff;outline: none;background: none;padding-left:15px;color:#fff;
+            }
+            button{
+                width:280px;height:30px;background:none;border:1px solid #fff;margin-top:25px;color:#fff;
+            }
+        }
+        article:nth-of-type(2){
+           border:none;padding-left:30px;width:295px;line-height:24px;
+           p:nth-of-type(1){
+               padding-bottom: 21px;;
+           }
+        }
+    }
+}

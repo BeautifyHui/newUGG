@@ -3,14 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script src="jquery/jquery.min.js"></script>
-		<script src="js/cookie-package.js"></script>
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/login.css" />
 		<link rel="stylesheet" href="font/iconfont.css" />
+		<script src="jquery/jquery.min.js"></script>
+		
 	</head>
 	<body>
-		<div id="top"></div>
 		<div id="nav">
 			<div id="shadow" style="display:none"> <!--搜索功能-->
 				<div>
@@ -269,100 +268,44 @@
 					</li>
 					<li>
 						<i class="iconfont icon-pullup"></i>
-						<a href="login.html">登录</a><a href="register.html">/注册</a>
+						<a href="#">登录</a><a href="register.html">/注册</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div id="banner"> <!-- 轮播图-->
-			<i class="iconfont icon-xiangzuojiantou"></i>
-			<ul>
-				<li style="left:0px" ><img src="img/index/home1.jpg" alt=""/></li>
-				<li><img src="img/index/home2.jpg" alt="" /></li>
-				<li><img src="img/index/home3.jpg" alt="" /></li>
-				<li><img src="img/index/home4.gif" alt="" /></li>
-			</ul>
-			<i class="iconfont icon-xiangyoujiantou"></i>
-			<ol>
-				<li style="background:#E9E9E9"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ol>
+		<div id="con2">
+			<section>
+				<article>
+				<h2>登录</h2>
+				<span>用户名</span><i>已经是微信，直营店会员</i>
+				<input type="text" id="name" /><br />
+				<label for="pass">密码</label><br />
+				<input type="password" id="pass"/><br />
+				<a href="#">忘记密码？</a>
+				<button id="login">登录</button>
+				</article>
+			<article>
+				<p>您可使用会员账号享受以下UGG服务：</p>
+				<p>生日当月消费，享额外礼遇</p>
+				<p>轻松查看订单物流状态</p>
+				<p>便捷的退换货操作</p>
+				<p>第一手获悉促销 & 新品资讯</p>
+				<p>还不是UGG会员？</p>
+				<button><a href="register.html" style="color:#fff;text-decoration: none;">注册</a></button>
+			</article>
+			</section>
 		</div>
-		<div id="con" class="clearfix">    <!--二级导航栏-->
-			<h2>S18早春新品</h2>   
-			<ul class="clearfix">
-				<a href="#"><li>
-					<img src="img/index/mpic1.jpg" alt="" />
-				</li></a>
-				<a href="#"><li>
-					<img src="img/index/mpic2.jpg" alt="" />
-				</li></a>
-				<a href="#"><li>
-					<img src="img/index/mpic3.jpg" alt="" />
-				</li></a>
-			</ul>
-			<div class="con1">
-				<h2>#thisisugg</h2>
-				<i class="iconfont icon-xiangzuojiantou"></i>
-					<div class="cbox">
-						<ul style="width:3600px;height:312px;position:absolute">
-						<!--<a href="">
-							<li><img src="" alt="" /></li>
-						</a>-->
-						</ul>
-					</div>
-				<i class="iconfont icon-xiangyoujiantou" style="left:1215px"></i>
+<!--//固定栏-->
+		<div id="fix" >
+				<a href="#top">
+					<i class="iconfont icon-pullup"></i>
+					<p>回到<br />顶部</p>
+				</a>
+				<a href="">
+					<i class="iconfont icon-comment"></i>
+					<p>对话<br />客服</p>
+				</a>
 			</div>
-			<div class="con2">
-				<ul>
-					<li>
-						<img src="img/home-mslide-1.jpg" alt="" />
-						<a href="#">
-							<p>女士 ></p>
-						</a>
-						<a href="#">女士 ></a>
-					</li>
-					<li>
-						<img src="img/home-mslide-2.jpg" alt="" />
-						<a href="#">
-							<p>儿童 ></p>
-						</a>
-						<a href="#">儿童 ></a>
-					</li>
-					<li>
-						<img src="img/home-mslide-3.jpg" alt="" />
-						<a href="#">
-							<p>男士 ></p>
-						</a>
-						<a href="#">男士 ></a>
-					</li>
-				</ul>
-			</div>
-			<div class="con3">
-				<div>
-					<i></i>
-					<span>UGG®最新资讯</span>
-					<i style ="left:725px"></i>
-					<ul>
-						<li>
-							<img src="img/upto_img_1.jpg" alt="" />
-							<h2>你的专属[晶]精彩 ></h2>
-						</li>
-						<li>
-							<img src="img/upto_img_2.jpg" alt="" />
-							<h2>女士包袋配饰 ></h2>
-						</li>
-						<li style="width: 350px;">
-							<img src="img/upto_img_3.jpg" alt="" />
-							<h2>UGG会员信息查询 ></h2>
-						</li>
-					</ul>
-				</div>
-				
-			</div>
-		</div>
 		<div id="bottom">  <!--底部-->
 			<div class="btm">
 				<div style="height:220px">
@@ -427,5 +370,6 @@
 		</div>
 	</body>
 </html>
-<script src="js/index.js"></script>
+<script src="js/cookie-package.js"></script>
 <script src="js/common.js"></script>
+<script src="js/login.js"></script>

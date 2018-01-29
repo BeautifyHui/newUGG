@@ -31,9 +31,6 @@
 #continer .conpic dl dd{
 	width:261px;height:310px;margin:0 auto;border-bottom: 1px solid #ccc;position: relative;
 }
-#continer .conpic dd p{
-	opacity: 0;
-}
 #continer .conpic dt li:nth-of-type(4){
 	display:none
 }
@@ -47,16 +44,13 @@
 	color:deepskyblue
 }
 #continer .conpic dd  p{
-	background:#000000;line-height:20px;color:#fff;font-size: 12px;text-align: right;width:261px;position: absolute;bottom:0
+	background:#000000;line-height:20px;color:#fff;font-size: 12px;text-align: right;width:261px;position: absolute;bottom:0;opacity: 0;
 }
 #continer>p{
 	line-height:20px;font-size:12px;width:1090px;margin:0 auto;padding:10px
 }
 #continer .conpic dl dd img{
 	width:261px;height:290px;position: absolute;top:0;left:0;
-}
-#continer .conpic dl dd img:nth-of-type(1){
-	z-index:1
 }
 #continer .conpic dl dt li em{
 	float:left;margin:1px;width:18px;height:18px;background: red;

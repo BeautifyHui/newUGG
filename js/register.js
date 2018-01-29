@@ -238,7 +238,7 @@ function y6(){
 			var str = JSON.stringify(arr)
 			save("user",str,10 )
 			alert("注册成功");
-			location.href="usercenter.html";
+			location.href="login.html";
 		}else{
 			alert("请正确填写必要信息")
 		}

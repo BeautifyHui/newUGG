@@ -1,4 +1,14 @@
-$.ajax({  //获取小图片加载到页面
+
+//获取商品信息并动态显示
+if(get("product")){
+	var str = get("product");
+	var json = JSON.parse(str);
+	$(".fdj").html(`<img src="img/girl/${json.pic}" alt="" />`)
+	$(".type").html(json.name);
+	$(".price").html(`${json.price} | 货号：1020038-GRV-0`)
+}
+//获取小图片加载到页面
+$.ajax({ 
 		url : "json/details.json",
 		type : "get",
 		success : function(arr){
@@ -22,7 +32,6 @@ $.ajax({  //获取小图片加载到页面
 			})
 			$(".left1").find("div:last").click(function(){  //上下调节按钮
 				index--;
-				console.log(index)
 				if(index < 0){
 					index = 0;
 				}
@@ -30,8 +39,9 @@ $.ajax({  //获取小图片加载到页面
 			})
 		}
 	})
+//放大镜效果
 fangdajing();
-function fangdajing(){    //放大镜效果
+function fangdajing(){    
 	var flag = true;
 	$(".fdj").click(function(e){
 		if(flag){
@@ -84,3 +94,59 @@ function chose(){
 		$(".right1").find("section").find("p:first").html(str);
 	})
 }
+//洗护详情展开与合并
+list();
+function list(){
+	var flag = true;
+	$("#list-show").click(function(){
+		if(flag){
+			$(this).html("×");
+			$(this).parent().siblings().css("display","block");
+			flag = false;
+		}else{
+			$(this).html("+");
+			$(this).parent().siblings().fadeOut(1);
+			flag = true;
+		}
+	})
+	
+}
+//鼠标移速移出感兴趣商品
+$(".conpic1").mouseenter(function(){
+	$(this).find("dl").css("border","1px solid rgba(1,1,1,1)")
+	$(this).find("dd").find("p").fadeIn(1);
+}).mouseleave(function(){
+	$(this).find("dl").css("border","1px solid rgba(1,1,1,0)")
+	$(this).find("dd").find("p").fadeOut(1);
+})
+
+//选择显示商品详情内容
+$("#con1-menu").find("li").click(function(){
+	$(this).css({"background":"#E7E1CD","border-bottom":"1px solid #222"}).siblings().css({"background":"#fff","border-bottom":"none"})
+	hide($(this).index());
+})
+function hide(index){
+	$(".part").css("display","block");
+	for(var i = 0;i < index;i++){
+		$(".part").eq(i).css("display","none");
+	}
+}
+//侧边栏1-4点击
+for(let i = 0;i < 4;i++){
+	$("#fix").find("a").eq(i).click(function(){
+		$("html,body").scrollTop(1190);
+		$("#con1-menu").find("li").eq(i).css({"background":"#E7E1CD","border-bottom":"1px solid #222"}).siblings().css({"background":"#fff","border-bottom":"none"})
+		hide(i);
+		
+		return false;
+	})
+}
+//客服对话功能
+$("#fix").find("a:last").click(function(){
+	alert("对不起，业务暂未开通")
+})
+
+//加入购物出功能
+$("#save").click(function(){
+	
+})
