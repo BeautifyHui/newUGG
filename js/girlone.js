@@ -76,3 +76,17 @@ $.ajax({
 			})
 		}
 })
+//楼梯效果
+$(window).scroll(function(){
+	if($("html,body").scrollTop() > 170 && $("html,body").scrollTop() < 1460){
+		var i = Math.round(($("html,body").scrollTop()-335) / 402)
+		$("#stairs").find("li").eq(i).css("background","red").siblings().css("background","#ccc")
+	}else{
+		$("#stairs").find("li").css("background","#ccc")
+	}
+})
+$("#stairs").find("li").click(function(){
+	$(this).css("background","red").siblings().css("background","#ccc");
+	var top = ($(this).index() * 402) + 330
+	$("html,body").scrollTop(top)
+})
