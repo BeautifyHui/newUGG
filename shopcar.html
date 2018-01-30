@@ -9,7 +9,7 @@
 		<script src="jquery/jquery.min.js"></script>
 		<script src="js/cookie-package.js"></script>
 		<script src="js/common.js"></script>
-		<script src="js/shopcar.js"></script>
+		
 	</head>
 	<body>
 		<a name="top">  </a>
@@ -251,11 +251,11 @@
 			</div>
 			<div class="div">   <!--购物车-->
 				<i class="iconfont icon-cuowu close"></i>
-				<h3>购物带中还没有商品</h3>
+				<h3 class="shopcar">购物带中还没有商品</h3>
 				<ul>
 					<li>
 						<i class="iconfont icon-goodsfavor"></i>
-						<a href="#">购物袋（0）</a>
+						<a href="#" id="shop1">购物袋（0）</a>
 					</li>
 					<li>
 						<i class="iconfont icon-like"></i>
@@ -278,12 +278,12 @@
 		</div>
 		<div id="con4">
 			<p>当前位置/购物车</p>
-			<ul>
-			<p><i>❶</i><span> &ensp;购物袋</span><i>❷</i><span> &ensp;确认订单</span><i>❸</i><span> &ensp;提交订单</span></p>
-			<p>【您可能感兴趣的促销活动】</p>
-			<span>1.27-2.11，购指定款商品享两件8折优惠（可折上折）</span>
-			<span>买CNY女士指定款赠女士新年礼袜</span>
-			<span>买CNY男士指定款赠男士新年礼袜</span>
+			<ul class="con5">
+				<p><i>❶</i><span> &ensp;购物袋</span><i>❷</i><span> &ensp;确认订单</span><i>❸</i><span> &ensp;提交订单</span></p>
+				<p>【您可能感兴趣的促销活动】</p>
+				<span>1.27-2.11，购指定款商品享两件8折优惠（可折上折）</span>
+				<span>买CNY女士指定款赠女士新年礼袜</span>
+				<span>买CNY男士指定款赠男士新年礼袜</span>
 				<table  cellspacing="0" cellpadding="0">
 					<li>
 						<!--<tr>
@@ -379,3 +379,4 @@
 		</div>
 	</body>
 </html>
+<script src="js/shopcar.js"></script>

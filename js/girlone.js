@@ -24,7 +24,7 @@ $.ajax({
 				str1 += `<img src="img/girl/${arr[i].src[j]}" alt="" />`;
 				str2 += `<em style="background:${arr[i].color[j]}"></em>`;
 			}
-				str += `<a href = "#" data-pic=${arr[i].src[j-1]} data-name=${arr[i].name} data-price=${arr[i].price}>
+				str += `<a href = "#" data-pic=${arr[i].src[j-1]} data-name=${arr[i].name} data-price=${arr[i].price} data-idname="${i}">
 						<dl>
 						<dd>
 							${str1}
@@ -47,7 +47,8 @@ $.ajax({
 					var json= {
 						"pic" : $(this).data("pic"),
 						"name" : $(this).data("name"),
-						"price" : $(this).data("price")
+						"price" : $(this).data("price"),
+						"id" : $(this).data("idname")
 					}
 					var str = JSON.stringify(json);
 					save("product",str)
@@ -56,22 +57,22 @@ $.ajax({
 				})
 		}
 		
-//鼠标移入商品事件
-$("#continer").find(".conpic").find("dl").mouseenter(function(){
-	$(this).find("p").css("opacity",1)
-	$(this).find("li:last").css("display","block")
-	$(this).css("border","1px solid #ccc")
-}).mouseleave(function(){
-	$(this).find("p").css("opacity",0)
-	$(this).find("li:last").css("display","none")
-	$(this).css("border","1px solid rgba(1,1,1,0)")
-})
-		
-//鼠标移入换商品颜色
-$(".conpic").find("dl").find("li:last").find("em").mouseenter(function(){
-	$(this).parent().parent().parent().find("img").eq( $(this).index() ).css("z-index",1).siblings().css("z-index",0)
-}).mouseleave(function(){
-		$(this).parent().parent().parent().find("img").eq(0).css("z-index",1).siblings().css("z-index",0)
-	})
-}
+		//鼠标移入商品事件
+		$("#continer").find(".conpic").find("dl").mouseenter(function(){
+			$(this).find("p").css("opacity",1)
+			$(this).find("li:last").css("display","block")
+			$(this).css("border","1px solid #ccc")
+		}).mouseleave(function(){
+			$(this).find("p").css("opacity",0)
+			$(this).find("li:last").css("display","none")
+			$(this).css("border","1px solid rgba(1,1,1,0)")
+		})
+				
+		//鼠标移入换商品颜色
+		$(".conpic").find("dl").find("li:last").find("em").mouseenter(function(){
+			$(this).parent().parent().parent().find("img").eq( $(this).index() ).css("z-index",1).siblings().css("z-index",0)
+		}).mouseleave(function(){
+				$(this).parent().parent().parent().find("img").eq(0).css("z-index",1).siblings().css("z-index",0)
+			})
+		}
 })

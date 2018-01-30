@@ -24,7 +24,7 @@ $.ajax({
 			})
 			var height = $("#detail").find("img").eq(0).height(); 
 			$(".left1").find("div:first").click(function(){  //上下调节按钮
-				$("#detail").animate({"top":-index*height},1000)
+				$("#detail").animate({"top":-index*height},500)
 				index++;
 				if(index > 2){
 					index = 2;
@@ -35,10 +35,11 @@ $.ajax({
 				if(index < 0){
 					index = 0;
 				}
-				$("#detail").animate({"top":-index*height},1000)
+				$("#detail").animate({"top":-index*height},500)
 			})
 		}
-	})
+})
+
 //放大镜效果
 fangdajing();
 function fangdajing(){    
@@ -69,12 +70,15 @@ function fangdajing(){
 			flag = true;
 	})
 }
-$("#pinkp").click(function(){  //点击切换图片
+
+//点击切换图片
+$("#pinkp").click(function(){  
 	$(".fdj").html(`<img src="img/details/l1.jpg">`)
 })
 $("#bluep").click(function(){
 	$(".fdj").html(`<img src="img/details/l9.jpg">`)
 })
+
 //选取尺码
 chose()
 function chose(){
@@ -94,6 +98,7 @@ function chose(){
 		$(".right1").find("section").find("p:first").html(str);
 	})
 }
+
 //洗护详情展开与合并
 list();
 function list(){
@@ -109,9 +114,9 @@ function list(){
 			flag = true;
 		}
 	})
-	
 }
-//鼠标移速移出感兴趣商品
+
+//鼠标移入移出感兴趣商品
 $(".conpic1").mouseenter(function(){
 	$(this).find("dl").css("border","1px solid rgba(1,1,1,1)")
 	$(this).find("dd").find("p").fadeIn(1);
@@ -131,6 +136,7 @@ function hide(index){
 		$(".part").eq(i).css("display","none");
 	}
 }
+
 //侧边栏1-4点击
 for(let i = 0;i < 4;i++){
 	$("#fix").find("a").eq(i).click(function(){
@@ -141,12 +147,52 @@ for(let i = 0;i < 4;i++){
 		return false;
 	})
 }
+
 //客服对话功能
 $("#fix").find("a:last").click(function(){
-	alert("对不起，业务暂未开通")
+	alert("对不起!业务暂未开通")
+
 })
 
-//加入购物出功能
-$("#save").click(function(){
-	
-})
+//购物车商品添加功能
+shopcar();
+function shopcar(){
+	var shopArr = [];
+	var i = 0;
+	$("#save").click(function(){
+		if( parseInt($(".size").html())){
+			if($(".select").find("option:selected").index() != 0){
+				if(shopArr){
+					for(var j = 0;j < shopArr.length;j++ ){
+						if(JSON.parse( get("product") ).id == shopArr[j].id ){
+							shopArr[j].num += $(".select").find("option:selected").index();
+							i += shopArr[j].num;
+							var str = JSON.stringify(shopArr);
+							save("shopCar",str);
+							$(".shopcar").html("购物袋中有（"+i+"）件商品");
+							$("#shop1").html("商品（"+i+"）")
+							return;
+						}
+					}
+				}
+				var json = {
+					"type":$(".type").html(),
+					"picture":JSON.parse( get("product") ).pic,
+					"price":JSON.parse( get("product") ).price,
+					"num":$(".select").find("option:selected").index(),
+					"size":$(".size").html(),
+					"id" : JSON.parse( get("product") ).id
+				}
+				shopArr.push(json);
+				var str = JSON.stringify(shopArr)
+				save("shopCar",str)
+				$(".shopcar").html("购物袋中有（"+i+"）件商品");
+				$("#shop1").html("商品（"+i+"）")
+			}else{
+				alert("请选择数量")
+			}
+		}else{
+			alert("请选择尺码哦")
+		}
+	})
+}

@@ -5,6 +5,7 @@
        
     }
     ul{
+        display: none;
     p{
         height:70px;line-height:70px;margin-top:25px;
         span{
@@ -35,7 +36,10 @@
             td:nth-last-of-type(1){
                 text-align: right;
                 em{
-                    font-size:28px;padding:35px;
+                    font-size:28px;padding:35px;color:red;
+                    i{
+                        font-size:22px;color:#404040;
+                    }
                 }
             }
         }
