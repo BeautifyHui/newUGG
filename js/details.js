@@ -187,7 +187,8 @@ function shopcar(){
 				var str = JSON.stringify(shopArr)
 				save("shopCar",str)
 				$(".shopcar").html("购物袋中有（"+i+"）件商品");
-				$("#shop1").html("商品（"+i+"）")
+				$("#shop1").html("商品（"+i+"）");
+				alert("添加成功！")
 			}else{
 				alert("请选择数量")
 			}
